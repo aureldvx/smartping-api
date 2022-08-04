@@ -217,8 +217,8 @@ abstract class SmartpingCore
             $response = self::makeRequest($endpoint, $requestParams);
 
             return self::deserializeObject($response, $normalizationModel, $rootKey);
-        } catch (Exception $e) {
-            // var_dump(sprintf('ERROR : %s', $e->getMessage()));
+        } catch (Exception) {
+            //var_dump(sprintf('ERROR : %s', $e->getMessage()));
 
             return null;
         }
@@ -255,13 +255,15 @@ abstract class SmartpingCore
             throw new Exception("The root key doesn't exist in the response body");
         }
 
+        $decodedXML = simplexml_load_string($content, "SimpleXMLElement", LIBXML_NOCDATA);
+
         $isList = preg_match("/<liste>/", $content);
-        $isSingleResult = count($rootKeyMatches[0]) === 1;
+        $isSingleResult = $decodedXML->count() === 1;
 
         $suffix = match (true) {
-            ! $isList && $isSingleResult => '',
+            !$isList => '',
             $isList && $isSingleResult => '[]',
-            $isList && ! $isSingleResult => '[][]',
+            $isList && !$isSingleResult => '[][]',
         };
 
         /** @var SmartpingObject|SmartpingObject[] $object */
