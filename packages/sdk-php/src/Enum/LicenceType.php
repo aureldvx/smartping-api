@@ -9,4 +9,5 @@ enum LicenceType: string
     case COMPETITION = 'T';
     case TRAINING = 'P';
     case EVENT = 'E';
+    case UNDEFINED = '';
 }
