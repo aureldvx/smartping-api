@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<liste>
+  <licence>
+    <idlicence>12345</idlicence>
+    <licence>1234567</licence>
+    <nom>DOE</nom>
+    <prenom>John</prenom>
+    <numclub>10160051</numclub>
+    <nomclub>Chateauneuf TT Castelnovien</nomclub>
+    <sexe>M</sexe>
+    <type>T</type>
+    <certif>N</certif>
+    <validation>07/07/2022</validation>
+    <echelon></echelon>
+    <place/>
+    <point>1122</point>
+    <cat>Seniors</cat>
+  </licence>
+</liste>

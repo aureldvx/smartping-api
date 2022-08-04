@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<liste>
+  <joueur>
+    <licence>0123456</licence>
+    <nom>DOE</nom>
+    <prenom>John</prenom>
+    <club>Chateauneuf TT Castelnovi</club>
+    <nclub>10160051</nclub>
+    <natio></natio>
+    <clglob>16019</clglob>
+    <point>1122</point>
+    <aclglob>16020</aclglob>
+    <apoint>1127.98</apoint>
+    <clast>11</clast>
+    <clnat>15541</clnat>
+    <categ>S</categ>
+    <rangreg>1314</rangreg>
+    <rangdep>114</rangdep>
+    <valcla>1122</valcla>
+    <clpro>11</clpro>
+    <valinit>1153</valinit>
+  </joueur>
+</liste>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<liste>
+  <epreuve>
+    <idepreuve>258</idepreuve>
+    <idorga>1</idorga>
+    <libelle>Chpt France par equipes feminin</libelle>
+    <typepreuve>H</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>257</idepreuve>
+    <idorga>1</idorga>
+    <libelle>Chpt France par equipes masculin</libelle>
+    <typepreuve>H</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>8986</idepreuve>
+    <idorga>1</idorga>
+    <libelle>FED_Championnat de France par Equipes Féminin</libelle>
+    <typepreuve>H</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>2304</idepreuve>
+    <idorga>1</idorga>
+    <libelle>FED_Championnat de France par Equipes Féminin</libelle>
+    <typepreuve>H</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>8985</idepreuve>
+    <idorga>1</idorga>
+    <libelle>FED_Championnat de France par Equipes Masculin</libelle>
+    <typepreuve>H</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>2303</idepreuve>
+    <idorga>1</idorga>
+    <libelle>FED_Championnat de France par Equipes Masculin</libelle>
+    <typepreuve>H</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>934</idepreuve>
+    <idorga>1</idorga>
+    <libelle>Championnat des Jeunes FFTT</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>372</idepreuve>
+    <idorga>1</idorga>
+    <libelle>Chpt par équipes corpo</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>879</idepreuve>
+    <idorga>1</idorga>
+    <libelle>Coupe de France des Clubs</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>278</idepreuve>
+    <idorga>1</idorga>
+    <libelle>Coupe Nationale Corporative</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>277</idepreuve>
+    <idorga>1</idorga>
+    <libelle>Coupe Nationale Veterans</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>9064</idepreuve>
+    <idorga>1</idorga>
+    <libelle>FED_Championnat par Equipes Corporatif</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>2418</idepreuve>
+    <idorga>1</idorga>
+    <libelle>FED_Championnat par Equipes Corporatif</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>9412</idepreuve>
+    <idorga>1</idorga>
+    <libelle>FED_Championnat par Equipes Jeunes</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>2980</idepreuve>
+    <idorga>1</idorga>
+    <libelle>FED_Championnat par Equipes Jeunes</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>2925</idepreuve>
+    <idorga>1</idorga>
+    <libelle>FED_Coupe de France des Clubs</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>9003</idepreuve>
+    <idorga>1</idorga>
+    <libelle>FED_Coupe Nationale Vétérans</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>2323</idepreuve>
+    <idorga>1</idorga>
+    <libelle>FED_Coupe Nationale Vétérans</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>9004</idepreuve>
+    <idorga>1</idorga>
+    <libelle>FED_Interclubs Jeunes</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>2325</idepreuve>
+    <idorga>1</idorga>
+    <libelle>FED_Interclubs Jeunes</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>279</idepreuve>
+    <idorga>1</idorga>
+    <libelle>Interclubs Jeunes</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>967</idepreuve>
+    <idorga>18</idorga>
+    <libelle>CAM DAVIS TOUR</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>9011</idepreuve>
+    <idorga>18</idorga>
+    <libelle>Chpt Reg Par Equipes Feminin</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>2334</idepreuve>
+    <idorga>18</idorga>
+    <libelle>Chpt Reg Par Equipes Feminin</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>288</idepreuve>
+    <idorga>18</idorga>
+    <libelle>Chpt Reg Par Equipes Feminin</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>265</idepreuve>
+    <idorga>18</idorga>
+    <libelle>Chpt Reg Par Equipes Masculin</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>1017</idepreuve>
+    <idorga>18</idorga>
+    <libelle>COUPE VETERANS</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>9455</idepreuve>
+    <idorga>18</idorga>
+    <libelle>COUPE VETERANS</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>3063</idepreuve>
+    <idorga>18</idorga>
+    <libelle>COUPE VETERANS</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>9345</idepreuve>
+    <idorga>18</idorga>
+    <libelle>CRITERIUM FEMININ</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>2866</idepreuve>
+    <idorga>18</idorga>
+    <libelle>CRITERIUM FEMININ</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>820</idepreuve>
+    <idorga>18</idorga>
+    <libelle>CRITERIUM FEMININ</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>9247</idepreuve>
+    <idorga>18</idorga>
+    <libelle>Finales Regionales par equipes</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>2696</idepreuve>
+    <idorga>18</idorga>
+    <libelle>Finales Regionales par equipes</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>650</idepreuve>
+    <idorga>18</idorga>
+    <libelle>Finales Regionales par equipes</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>149</idepreuve>
+    <idorga>18</idorga>
+    <libelle>Interclubs Biarritz</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>125</idepreuve>
+    <idorga>18</idorga>
+    <libelle>Interclubs CAM Bordeaux</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>146</idepreuve>
+    <idorga>18</idorga>
+    <libelle>Interclubs Marmande</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>9297</idepreuve>
+    <idorga>18</idorga>
+    <libelle>Intercomites</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>2784</idepreuve>
+    <idorga>18</idorga>
+    <libelle>Intercomites</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>738</idepreuve>
+    <idorga>18</idorga>
+    <libelle>Intercomites</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>4554</idepreuve>
+    <idorga>18</idorga>
+    <libelle>L10-Interclubs Regionaux</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>9980</idepreuve>
+    <idorga>18</idorga>
+    <libelle>L10-Interclubs Regionaux</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>759</idepreuve>
+    <idorga>18</idorga>
+    <libelle>TOURNOI LSA</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>1141</idepreuve>
+    <idorga>18</idorga>
+    <libelle>TOURNOIS COUPE DAVIS</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>8992</idepreuve>
+    <idorga>18</idorga>
+    <libelle>XXXXXXX</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+  <epreuve>
+    <idepreuve>2311</idepreuve>
+    <idorga>18</idorga>
+    <libelle>XXXXXXX</libelle>
+    <typepreuve>E</typepreuve>
+  </epreuve>
+</liste>

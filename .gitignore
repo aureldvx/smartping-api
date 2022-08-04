@@ -1,0 +1,15 @@
+# Globals
+.DS_Store
+.idea
+.vscode
+
+# PHP specific
+.phpunit.result.cache
+vendor/
+composer.lock
+
+# JS specific
+node_modules/
+package.lock
+yarn.lock
+pnpm-lock.yaml

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<liste>
+  <partie>
+    <licence>1234567</licence>
+    <advlic>1234567</advlic>
+    <vd>V</vd>
+    <numjourn>7</numjourn>
+    <codechamp>1</codechamp>
+    <date>06/05/2022</date>
+    <advsexe>M</advsexe>
+    <advnompre>DOE John</advnompre>
+    <pointres>1</pointres>
+    <coefchamp>1</coefchamp>
+    <advclaof>7</advclaof>
+    <idpartie>2266081</idpartie>
+  </partie>
+  <partie>
+    <licence>1234567</licence>
+    <advlic>1234567</advlic>
+    <vd>V</vd>
+    <numjourn>7</numjourn>
+    <codechamp>1</codechamp>
+    <date>06/05/2022</date>
+    <advsexe>M</advsexe>
+    <advnompre>DOE John</advnompre>
+    <pointres>2</pointres>
+    <coefchamp>1</coefchamp>
+    <advclaof>9</advclaof>
+    <idpartie>2266077</idpartie>
+  </partie>
+  <partie>
+    <licence>1234567</licence>
+    <advlic>1234567</advlic>
+    <vd>V</vd>
+    <numjourn>7</numjourn>
+    <codechamp>1</codechamp>
+    <date>06/05/2022</date>
+    <advsexe>M</advsexe>
+    <advnompre>DOE John</advnompre>
+    <pointres>0</pointres>
+    <coefchamp>1</coefchamp>
+    <advclaof>6</advclaof>
+    <idpartie>2266087</idpartie>
+  </partie>
+  <partie>
+    <licence>1234567</licence>
+    <advlic>1234567</advlic>
+    <vd>V</vd>
+    <numjourn>6</numjourn>
+    <codechamp>1</codechamp>
+    <date>08/04/2022</date>
+    <advsexe>M</advsexe>
+    <advnompre>DOE John</advnompre>
+    <pointres>6</pointres>
+    <coefchamp>1</coefchamp>
+    <advclaof>11</advclaof>
+    <idpartie>2088600</idpartie>
+  </partie>
+  <partie>
+    <licence>1234567</licence>
+    <advlic>1234567</advlic>
+    <vd>D</vd>
+    <numjourn>6</numjourn>
+    <codechamp>1</codechamp>
+    <date>08/04/2022</date>
+    <advsexe>M</advsexe>
+    <advnompre>DOE John</advnompre>
+    <pointres>-4.5</pointres>
+    <coefchamp>1</coefchamp>
+    <advclaof>12</advclaof>
+    <idpartie>2088594</idpartie>
+  </partie>
+  <partie>
+    <licence>1234567</licence>
+    <advlic>1234567</advlic>
+    <vd>V</vd>
+    <numjourn>6</numjourn>
+    <codechamp>1</codechamp>
+    <date>08/04/2022</date>
+    <advsexe>M</advsexe>
+    <advnompre>DOE John</advnompre>
+    <pointres>5</pointres>
+    <coefchamp>1</coefchamp>
+    <advclaof>10</advclaof>
+    <idpartie>2088589</idpartie>
+  </partie>
+</liste>

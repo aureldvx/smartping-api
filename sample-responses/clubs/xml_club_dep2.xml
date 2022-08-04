@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<liste>
+  <club>
+    <idclub>40000960</idclub>
+    <numero>10160237</numero>
+    <nom>Aigre Club Pongiste du Pays</nom>
+    <validation/>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160029</idclub>
+    <numero>10160029</numero>
+    <nom>Angouleme  TTGF</nom>
+    <validation>18/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160122</idclub>
+    <numero>10160122</numero>
+    <nom>AP Severinoise</nom>
+    <validation>07/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160010</idclub>
+    <numero>10160010</numero>
+    <nom>Chabanais tennis de table</nom>
+    <validation>07/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160085</idclub>
+    <numero>10160085</numero>
+    <nom>Chalais - Montmoreau</nom>
+    <validation>07/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160028</idclub>
+    <numero>10160028</numero>
+    <nom>Chasseneuil T.T.C.</nom>
+    <validation/>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160044</idclub>
+    <numero>10160044</numero>
+    <nom>Chateaubernard SL TT</nom>
+    <validation>07/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160051</idclub>
+    <numero>10160051</numero>
+    <nom>Chateauneuf TT Castelnovien</nom>
+    <validation>07/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>40001177</idclub>
+    <numero>10160240</numero>
+    <nom>Chazellois Copains Pongistes</nom>
+    <validation>07/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160040</idclub>
+    <numero>10160040</numero>
+    <nom>Cognac UA</nom>
+    <validation>13/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>40000959</idclub>
+    <numero>10160236</numero>
+    <nom>Confolens Tennis de Table</nom>
+    <validation>13/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160049</idclub>
+    <numero>10160049</numero>
+    <nom>Fleac M J C</nom>
+    <validation>07/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160024</idclub>
+    <numero>10160024</numero>
+    <nom>Gond Pontouvre T.T.G.P.</nom>
+    <validation>07/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160186</idclub>
+    <numero>10160186</numero>
+    <nom>L'Isle d'Espagnac 3STT</nom>
+    <validation>07/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160023</idclub>
+    <numero>10160023</numero>
+    <nom>La Couronne COC</nom>
+    <validation/>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>40000613</idclub>
+    <numero>10160232</numero>
+    <nom>La Rochefoucauld UA TT</nom>
+    <validation>07/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160059</idclub>
+    <numero>10160059</numero>
+    <nom>Magnac/Touvre TT Pirons</nom>
+    <validation>13/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160003</idclub>
+    <numero>10160003</numero>
+    <nom>Mansle   Coqs Rouges</nom>
+    <validation>07/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160030</idclub>
+    <numero>10160030</numero>
+    <nom>Merpins  U S</nom>
+    <validation>18/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160047</idclub>
+    <numero>10160047</numero>
+    <nom>Montbron Club Pongiste</nom>
+    <validation/>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160018</idclub>
+    <numero>10160018</numero>
+    <nom>Mornac Tennis de Table</nom>
+    <validation>07/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160185</idclub>
+    <numero>10160185</numero>
+    <nom>Puymoyen Tennis de Table</nom>
+    <validation>07/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>40000100</idclub>
+    <numero>10160225</numero>
+    <nom>Ruffec Chef Boutonne TT</nom>
+    <validation>07/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160218</idclub>
+    <numero>10160218</numero>
+    <nom>Sireuil ALTT</nom>
+    <validation/>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160042</idclub>
+    <numero>10160042</numero>
+    <nom>STT Brie Champniers</nom>
+    <validation>07/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160069</idclub>
+    <numero>10160069</numero>
+    <nom>T T C Baignes</nom>
+    <validation>18/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>40000196</idclub>
+    <numero>10160226</numero>
+    <nom>Torsac Club Pongiste</nom>
+    <validation>13/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160013</idclub>
+    <numero>10160013</numero>
+    <nom>Tourriers Jauldes EP</nom>
+    <validation>07/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160071</idclub>
+    <numero>10160071</numero>
+    <nom>TT Luchac-Chassors</nom>
+    <validation/>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160196</idclub>
+    <numero>10160196</numero>
+    <nom>TTC SG.ROUILLAC</nom>
+    <validation>07/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>20160197</idclub>
+    <numero>10160197</numero>
+    <nom>Vars Entente Pongiste</nom>
+    <validation>07/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+  <club>
+    <idclub>40000056</idclub>
+    <numero>10160223</numero>
+    <nom>Villefagnan Animation Loisirs</nom>
+    <validation>18/07/2022</validation>
+    <typeclub>L</typeclub>
+  </club>
+</liste>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<liste>
+  <division>
+    <iddivision>610</iddivision>
+    <libelle>R1M2 (Phase 2)</libelle>
+  </division>
+  <division>
+    <iddivision>611</iddivision>
+    <libelle>R2M1 (Phase 1)</libelle>
+  </division>
+  <division>
+    <iddivision>616</iddivision>
+    <libelle>R3M2 (Phase 2)</libelle>
+  </division>
+  <division>
+    <iddivision>1447</iddivision>
+    <libelle>R1M1 (Phase 1)</libelle>
+  </division>
+  <division>
+    <iddivision>1448</iddivision>
+    <libelle>R2M2 (Phase 2)</libelle>
+  </division>
+  <division>
+    <iddivision>1449</iddivision>
+    <libelle>R3M1 (Phase 1)</libelle>
+  </division>
+  <division>
+    <iddivision>13036</iddivision>
+    <libelle>PNEM1 (Phase 1)</libelle>
+  </division>
+  <division>
+    <iddivision>17969</iddivision>
+    <libelle>PNEM2 (Phase 2)</libelle>
+  </division>
+  <division>
+    <iddivision>20634</iddivision>
+    <libelle>PNM2 (Phase 2)</libelle>
+  </division>
+  <division>
+    <iddivision>20894</iddivision>
+    <libelle>PNM1 (Phase 1)</libelle>
+  </division>
+</liste>

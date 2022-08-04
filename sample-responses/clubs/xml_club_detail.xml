@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<liste>
+  <club>
+    <idclub>20160051</idclub>
+    <numero>10160051</numero>
+    <nom>Chateauneuf TT Castelnovien</nom>
+    <nomsalle>Complexe Sportif Francois Gabart</nomsalle>
+    <adressesalle1>La Croix Chadenne</adressesalle1>
+    <adressesalle2/>
+    <adressesalle3></adressesalle3>
+    <codepsalle>16120</codepsalle>
+    <villesalle>CHATEAUNEUF SUR CHARENTE</villesalle>
+    <web>https://ttcastelnovien.com</web>
+    <nomcor>DEVAUX</nomcor>
+    <prenomcor>Aurélien</prenomcor>
+    <mailcor>contact@me.com</mailcor>
+    <telcor>0607080901</telcor>
+    <latitude/>
+    <longitude/>
+    <validation>07/07/2022</validation>
+  </club>
+</liste>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<liste>
+  <equipe>
+    <idepr>8985</idepr>
+    <libepr>FED_Championnat de France par Equipes Masculin</libepr>
+    <idequipe>1451</idequipe>
+    <libequipe>ANGOULEME TTGF 1 - Phase 1</libequipe>
+    <libdivision>FED_Nationale 2 Messieurs Phase 1 Poule 4</libdivision>
+    <liendivision>
+      <![CDATA[cx_poule=439513&D1=107428&organisme_pere=1]]>
+    </liendivision>
+  </equipe>
+  <equipe>
+    <idepr>8985</idepr>
+    <libepr>FED_Championnat de France par Equipes Masculin</libepr>
+    <idequipe>2763</idequipe>
+    <libequipe>ANGOULEME TTGF 2 - Phase 1</libequipe>
+    <libdivision>FED_Nationale 3 Messieurs Phase 1 Poule 13</libdivision>
+    <liendivision>
+      <![CDATA[cx_poule=439530&D1=107429&organisme_pere=1]]>
+    </liendivision>
+  </equipe>
+  <equipe>
+    <idepr>8985</idepr>
+    <libepr>FED_Championnat de France par Equipes Masculin</libepr>
+    <idequipe>6340</idequipe>
+    <libequipe>Angouleme TTGF 3 - Phase 1</libequipe>
+    <libdivision>L10-Pré Nationale Phase 1 Poule 1</libdivision>
+    <liendivision>
+      <![CDATA[cx_poule=439467&D1=107406&organisme_pere=18]]>
+    </liendivision>
+  </equipe>
+  <equipe>
+    <idepr>8985</idepr>
+    <libepr>FED_Championnat de France par Equipes Masculin</libepr>
+    <idequipe>233</idequipe>
+    <libequipe>Angouleme TTGF 5 - Phase 1</libequipe>
+    <libdivision>L10-Régionale 2 Phase 1 Poule 2</libdivision>
+    <liendivision>
+      <![CDATA[cx_poule=437307&D1=106766&organisme_pere=18]]>
+    </liendivision>
+  </equipe>
+  <equipe>
+    <idepr>8985</idepr>
+    <libepr>FED_Championnat de France par Equipes Masculin</libepr>
+    <idequipe>6364</idequipe>
+    <libequipe>Angouleme TTGF 4 - Phase 1</libequipe>
+    <libdivision>L10-Régionale 2 Phase 1 Poule 3</libdivision>
+    <liendivision>
+      <![CDATA[cx_poule=437308&D1=106766&organisme_pere=18]]>
+    </liendivision>
+  </equipe>
+  <equipe>
+    <idepr>8985</idepr>
+    <libepr>FED_Championnat de France par Equipes Masculin</libepr>
+    <idequipe>2414</idequipe>
+    <libequipe>Angouleme TTGF 6 - Phase 1</libequipe>
+    <libdivision>L10-Régionale 3 Phase 1 Poule 13</libdivision>
+    <liendivision>
+      <![CDATA[cx_poule=437326&D1=106767&organisme_pere=18]]>
+    </liendivision>
+  </equipe>
+</liste>
