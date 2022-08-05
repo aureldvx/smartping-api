@@ -6,6 +6,7 @@ namespace SmartpingApi\Model\Player;
 
 use SmartpingApi\Enum\Gender;
 use SmartpingApi\Model\SmartpingObject;
+use SmartpingApi\Service\PlayerAPI;
 use Symfony\Component\Serializer\Annotation\SerializedName;
 
 class SPIDPlayer extends SmartpingObject
@@ -102,6 +103,11 @@ class SPIDPlayer extends SmartpingObject
     public function points(): float
     {
         return $this->points;
+    }
+
+    public function details(): ?PlayerDetails
+    {
+        return PlayerAPI::getPlayer($this->licence);
     }
 
     /**

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace SmartpingApi\Model\Player;
 
 use SmartpingApi\Model\SmartpingObject;
+use SmartpingApi\Service\PlayerAPI;
 use Symfony\Component\Serializer\Annotation\SerializedName;
 
 class RankedPlayer extends SmartpingObject
@@ -73,6 +74,10 @@ class RankedPlayer extends SmartpingObject
         return $this->pointsRank;
     }
 
+    public function details(): ?PlayerDetails
+    {
+        return PlayerAPI::getPlayer($this->licence);
+    }
 
     /**
      * @return array{
