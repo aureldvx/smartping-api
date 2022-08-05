@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace SmartpingApi\Model\Contest;
+namespace SmartpingApi\Model\Contest\Individual;
 
 use SmartpingApi\Model\SmartpingObject;
 
