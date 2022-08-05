@@ -4,6 +4,7 @@ namespace SmartpingApi\Service;
 
 use SmartpingApi\Contract\UseCase\PlayerInterface;
 use SmartpingApi\Enum\ApiEndpoint;
+use SmartpingApi\Model\Player\Game;
 use SmartpingApi\Model\Player\PlayerDetails;
 use SmartpingApi\Model\Player\PlayerRankHistory;
 use SmartpingApi\Model\Player\RankedGame;
@@ -239,8 +240,63 @@ class PlayerAPI extends SmartpingCore implements PlayerInterface
      */
     public static function getPlayerGameHistory(string $licence): array
     {
-        // TODO: Implement getPlayerGameHistory() method.
-        return [];
+        $rankedResponse = self::getPlayerGameHistoryOnRankingBase($licence);
+        $spidResponse = self::getPlayerGameHistoryOnSpidBase($licence);
+
+        /**
+         * @param array{ranked: RankedGame|null, spid: SPIDGame|null} $acc
+         * @param SPIDGame $cur
+         *
+         * @return array<array-key, array{ranked: RankedGame|null, spid: SPIDGame|null}>
+         */
+        $associateRankedToSpidGame = function (array $acc, SPIDGame $cur) use ($rankedResponse): array {
+            $arr = [];
+            $arr['spid'] = $cur;
+            $arr['ranked'] = null;
+
+            $rankedSearch = array_filter($rankedResponse, function($ranked) use ($cur) {
+                return (
+                    $ranked->isVictory() === $cur->isVictory()
+                    && $ranked->opponentName() === $cur->opponentName()
+                    && $ranked->date()->getTimestamp() === $cur->date()->getTimestamp()
+                );
+            });
+
+            if (!empty($rankedSearch)) {
+                $key = array_keys($rankedSearch)[0];
+                $arr['ranked'] = $rankedResponse[$key];
+                unset($rankedResponse[$key]);
+            }
+
+            $acc[] = $arr;
+            return $acc;
+        };
+
+        if (!empty($spidResponse)) {
+            /** @var array<array-key, array{ranked: RankedGame|null, spid: SPIDGame|null}> $sortedResponses */
+            $sortedResponses = array_reduce($spidResponse, $associateRankedToSpidGame, []);
+
+            if (!empty($rankedResponse)) {
+                foreach ($rankedResponse as $r) {
+                    $sortedResponses[] = [
+                        'ranked' => $r,
+                        'spid' => null,
+                    ];
+                }
+            }
+        } else {
+            /** @var array<array-key, array{ranked: RankedGame|null, spid: SPIDGame|null}> $sortedResponses */
+            $sortedResponses = [];
+
+            foreach ($rankedResponse as $r) {
+                $sortedResponses[] = [
+                    'ranked' => $r,
+                    'spid' => null,
+                ];
+            }
+        }
+
+        return array_map(fn ($r) => new Game($r['ranked'], $r['spid']), $sortedResponses);
     }
 
     /**

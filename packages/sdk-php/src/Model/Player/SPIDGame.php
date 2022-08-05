@@ -74,5 +74,4 @@ class SPIDGame extends SmartpingObject
     {
         return $this->date;
     }
-
 }

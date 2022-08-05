@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use SmartpingApi\Model\Player\Game;
 use SmartpingApi\Model\Player\PlayerRankHistory;
 use SmartpingApi\Model\Player\RankedGame;
 use SmartpingApi\SmartpingAPI;
@@ -43,3 +44,18 @@ it('should return an empty array of history games from SPID base for a given lic
         ->toBeArray()
         ->and($result)->toHaveCount(0);
 });
+
+it('should return an array of history games from all bases for a given licence', function() {
+    $result = $this->smartping->getPlayerGameHistory('1610533');
+    expect($result)
+        ->toBeArray()
+        ->and($result)->not()->toHaveCount(0)
+        ->and($result[0])->toBeInstanceOf(Game::class);
+});
+
+it('should return an empty array of history games from all bases for a given licence when no game has been played', function() {
+    $result = $this->smartping->getPlayerGameHistory('1610533');
+    expect($result)
+        ->toBeArray()
+        ->and($result)->toHaveCount(0);
+})->skip();
