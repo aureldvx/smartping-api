@@ -1,15 +1,10 @@
 # Globals
-.DS_Store
+.vscode/*
+!.vscode/extensions.json
 .idea
-.vscode
-
-# PHP specific
-.phpunit.result.cache
-vendor/
-composer.lock
-
-# JS specific
-node_modules/
-package.lock
-yarn.lock
-pnpm-lock.yaml
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

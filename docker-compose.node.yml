@@ -1,0 +1,63 @@
+# ----------------------------------------------- #
+# Docker compose file used for Node SDK version.
+# ----------------------------------------------- #
+
+version: "3.9"
+
+services:
+  # NodeJS v18+
+  # ----------------------------------------------- #
+  node:
+    build:
+      dockerfile: docker/node/Dockerfile
+      context: .
+    container_name: smartping_api_node
+    volumes:
+      - ./:/app
+      - ~/.gitconfig:/root/.gitconfig:ro
+    working_dir: /app/packages/sdk-js
+
+  # Vitest for unit testing
+  # ----------------------------------------------- #
+  vitest:
+    build:
+      dockerfile: docker/node/Dockerfile
+      context: .
+    container_name: smartping_api_vitest
+    depends_on:
+      - node
+    entrypoint: /app/packages/sdk-js/node_modules/.bin/vitest
+    volumes:
+      - ./:/app
+      - ~/.gitconfig:/root/.gitconfig:ro
+    working_dir: /app/packages/sdk-js
+
+  # ESLint to respect conventions
+  # ----------------------------------------------- #
+  eslint:
+    build:
+      dockerfile: docker/node/Dockerfile
+      context: .
+    container_name: smartping_api_eslint
+    depends_on:
+      - node
+    command: "yarn run format"
+    volumes:
+      - ./:/app
+      - ~/.gitconfig:/root/.gitconfig:ro
+    working_dir: /app/packages/sdk-js
+
+  # microbundle to build the library
+  # ----------------------------------------------- #
+  microbundle:
+    build:
+      dockerfile: docker/node/Dockerfile
+      context: .
+    container_name: smartping_api_microbundle
+    depends_on:
+      - node
+    command: "yarn run build"
+    volumes:
+      - ./:/app
+      - ~/.gitconfig:/root/.gitconfig:ro
+    working_dir: /app/packages/sdk-js

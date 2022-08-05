@@ -1,0 +1,67 @@
+# ----------------------------------------------- #
+# Docker compose file used for PHP SDK version.
+# ----------------------------------------------- #
+
+version: "3.9"
+
+services:
+  # PHP 8.1 minimum (CLI version)
+  # ----------------------------------------------- #
+  php:
+    build:
+      dockerfile: docker/php/Dockerfile
+      context: .
+    container_name: smartping_api_php
+    volumes:
+      - ./:/app
+      - ~/.gitconfig:/root/.gitconfig:ro
+    working_dir: /app/packages/sdk-php
+
+  # Composer executable
+  # ----------------------------------------------- #
+  composer:
+    build:
+      dockerfile: docker/php/Dockerfile
+      context: .
+    container_name: smartping_api_composer
+    depends_on:
+      - php
+    entrypoint: composer
+    profiles:
+      - secondary
+    volumes:
+      - ./:/app
+      - ~/.gitconfig:/root/.gitconfig:ro
+    working_dir: /app/packages/sdk-php
+
+  # PestPHP for testing
+  # ----------------------------------------------- #
+  pest:
+    build:
+      dockerfile: docker/php/Dockerfile
+      context: .
+    container_name: smartping_api_pest
+    depends_on:
+      - php
+    entrypoint: /app/packages/sdk-php/vendor/bin/pest
+    profiles:
+      - secondary
+    volumes:
+      - ./:/app
+    working_dir: /app/packages/sdk-php
+
+  # Psalm static analysis
+  # ----------------------------------------------- #
+  psalm:
+    build:
+      dockerfile: docker/php/Dockerfile
+      context: .
+    container_name: smartping_api_psalm
+    depends_on:
+      - php
+    entrypoint: /app/packages/sdk-php/vendor/bin/psalm
+    profiles:
+      - secondary
+    volumes:
+      - ./:/app
+    working_dir: /app/packages/sdk-php
