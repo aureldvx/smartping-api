@@ -1,0 +1,37 @@
+{
+  "name": "smartping-api",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "source": "src/smartping-api.ts",
+  "exports": {
+    "require": "./lib/smartping-api.cjs",
+    "default": "./lib/smartping-api.js"
+  },
+  "main": "./lib/smartping-api.cjs",
+  "module": "./lib/smartping-api.js",
+  "unpkg": "./lib/smartping-api.umd.js",
+  "scripts": {
+    "dev": "microbundle watch",
+    "build": "microbundle",
+    "test:browser": "vitest --environment happy-dom",
+    "test:node": "vitest --environment node",
+    "coverage": "vitest run --coverage",
+    "format": "eslint"
+  },
+  "devDependencies": {
+    "microbundle": "^0.15.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.0",
+    "vitest": "^0.21.0"
+  },
+  "dependencies": {
+    "browser-or-node": "^2.0.0",
+    "eslint": "^8.21.0",
+    "eslint-plugin-unicorn": "^43.0.2",
+    "got": "^12.3.0"
+  },
+  "eslintConfig": {
+    "extends": "plugin:unicorn/recommended"
+  }
+}
