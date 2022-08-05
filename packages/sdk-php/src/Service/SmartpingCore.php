@@ -203,6 +203,20 @@ abstract class SmartpingCore
 
 
     /**
+     * @param SmartpingObject|SmartpingObject[]|null $response
+     *
+     * @return SmartpingObject[]
+     */
+    protected static function getResponseAsArray(SmartpingObject|array|null $response): array
+    {
+        return match(true) {
+          is_null($response) => [],
+          is_object($response) => [$response],
+          default => $response,
+        };
+    }
+
+    /**
      * Appelle un endpoint et le convertit en modèle.
      *
      * @return SmartpingObject|SmartpingObject[]|null

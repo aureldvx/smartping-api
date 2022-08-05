@@ -13,6 +13,7 @@ use SmartpingApi\Model\Club\ClubDetail;
 use SmartpingApi\Model\Contest\Team\TeamMatchDetails;
 use SmartpingApi\Model\Organization\Organization;
 use SmartpingApi\Model\Player\PlayerDetails;
+use SmartpingApi\Model\Player\RankedGame;
 use SmartpingApi\Service\ClubAPI;
 use SmartpingApi\Service\CommonAPI;
 use SmartpingApi\Service\ContestAPI;
@@ -158,6 +159,24 @@ class SmartpingAPI extends SmartpingCore implements SmartpingInterface
     public function getPlayer(string $licence) : ?PlayerDetails
     {
         return PlayerAPI::getPlayer($licence);
+    }
+
+
+    /**
+     * @inheritdoc
+     */
+    public function getPlayerGameHistoryOnRankingBase(string $licence): array
+    {
+        return PlayerAPI::getPlayerGameHistoryOnRankingBase($licence);
+    }
+
+
+    /**
+     * @inheritdoc
+     */
+    public function getPlayerGameHistoryOnSpidBase(string $licence): array
+    {
+        return PlayerAPI::getPlayerGameHistoryOnSpidBase($licence);
     }
 
 

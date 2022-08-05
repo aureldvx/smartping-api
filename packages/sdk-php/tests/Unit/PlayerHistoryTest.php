@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use SmartpingApi\Model\Player\PlayerRankHistory;
+use SmartpingApi\Model\Player\RankedGame;
 use SmartpingApi\SmartpingAPI;
 
 uses()->group('player_history');
@@ -18,4 +19,12 @@ it('should return an array of history ranks for a given licence', function() {
         ->toBeArray()
         ->and($result)->not()->toHaveCount(0)
         ->and($result[0])->toBeInstanceOf(PlayerRankHistory::class);
+});
+
+it('should return an array of history games from ranking base for a given licence', function() {
+    $result = $this->smartping->getPlayerGameHistoryOnRankingBase('1610533');
+    expect($result)
+        ->toBeArray()
+        ->and($result)->not()->toHaveCount(0)
+        ->and($result[0])->toBeInstanceOf(RankedGame::class);
 });

@@ -6,6 +6,7 @@ use SmartpingApi\Contract\UseCase\PlayerInterface;
 use SmartpingApi\Enum\ApiEndpoint;
 use SmartpingApi\Model\Player\PlayerDetails;
 use SmartpingApi\Model\Player\PlayerRankHistory;
+use SmartpingApi\Model\Player\RankedGame;
 use SmartpingApi\Model\Player\RankedPlayer;
 use SmartpingApi\Model\Player\SPIDPlayer;
 
@@ -192,6 +193,30 @@ class PlayerAPI extends SmartpingCore implements PlayerInterface
         );
 
         return $response;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public static function getPlayerGameHistoryOnRankingBase(string $licence): array
+    {
+        /** @var RankedGame|RankedGame[]|null $response */
+        $response = SmartpingCore::fetch(
+            endpoint: ApiEndpoint::XML_PARTIE_MYSQL,
+            requestParams: ['licence' => $licence],
+            normalizationModel: RankedGame::class,
+            rootKey: 'partie'
+        );
+
+        /** @var RankedGame[] $normalizedResponse */
+        $normalizedResponse = SmartpingCore::getResponseAsArray($response);
+
+        return $normalizedResponse;
+    }
+
+    public static function getPlayerGameHistoryOnSpidBase(string $licence): array
+    {
+
     }
 
     /**

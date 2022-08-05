@@ -8,7 +8,9 @@ use SmartpingApi\Model\Player\Game;
 use SmartpingApi\Model\Player\Player;
 use SmartpingApi\Model\Player\PlayerDetails;
 use SmartpingApi\Model\Player\PlayerRankHistory;
+use SmartpingApi\Model\Player\RankedGame;
 use SmartpingApi\Model\Player\RankedPlayer;
+use SmartpingApi\Model\Player\SPIDGame;
 use SmartpingApi\Model\Player\SPIDPlayer;
 
 interface PlayerInterface
@@ -112,6 +114,26 @@ interface PlayerInterface
      * @return PlayerDetails|null Joueur trouvé (si existant)
      */
     public static function getPlayer(string $licence): ?PlayerDetails;
+
+    /**
+     * xml_partie_mysql.php
+     * ---------------------------------------------------------
+     * Renvoie la liste des parties de la base classement
+     * d’un joueur.
+     *
+     * @return RankedGame[] Ensemble des parties trouvées
+     */
+    public static function getPlayerGameHistoryOnRankingBase(string $licence): array;
+
+    /**
+     * xml_partie.php
+     * ---------------------------------------------------------
+     * Renvoie la liste des parties de la base SPID
+     * d’un joueur.
+     *
+     * @return SPIDGame[] Ensemble des parties trouvées
+     */
+    public static function getPlayerGameHistoryOnSpidBase(string $licence): array;
 
     /**
      * xml_partie.php

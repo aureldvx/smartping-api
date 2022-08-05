@@ -13,10 +13,10 @@ use SmartpingApi\Model\Club\ClubTeam;
 use SmartpingApi\Model\Common\News;
 use SmartpingApi\Model\Contest\Contest;
 use SmartpingApi\Model\Contest\Division;
-use SmartpingApi\Model\Contest\FederalCriteriumRank;
-use SmartpingApi\Model\Contest\IndividualContestGame;
-use SmartpingApi\Model\Contest\IndividualContestGroup;
-use SmartpingApi\Model\Contest\IndividualContestRank;
+use SmartpingApi\Model\Contest\Individual\FederalCriteriumRank;
+use SmartpingApi\Model\Contest\Individual\IndividualContestGame;
+use SmartpingApi\Model\Contest\Individual\IndividualContestGroup;
+use SmartpingApi\Model\Contest\Individual\IndividualContestRank;
 use SmartpingApi\Model\Contest\Team\TeamMatch;
 use SmartpingApi\Model\Contest\Team\TeamMatchDetails;
 use SmartpingApi\Model\Contest\Team\TeamPool;
@@ -26,6 +26,8 @@ use SmartpingApi\Model\Player\Game;
 use SmartpingApi\Model\Player\Player;
 use SmartpingApi\Model\Player\PlayerDetails;
 use SmartpingApi\Model\Player\PlayerRankHistory;
+use SmartpingApi\Model\Player\RankedGame;
+use SmartpingApi\Model\Player\SPIDGame;
 
 /**
  * Contrat d'implémentation pour utiliser l'API fournie
@@ -174,6 +176,26 @@ interface SmartpingInterface
      * @return PlayerDetails|null Joueur trouvé (si existant)
      */
     public function getPlayer(string $licence): ?PlayerDetails;
+
+    /**
+     * xml_partie_mysql.php
+     * ---------------------------------------------------------
+     * Renvoie la liste des parties de la base classement
+     * d’un joueur.
+     *
+     * @return RankedGame[] Ensemble des parties trouvées
+     */
+    public function getPlayerGameHistoryOnRankingBase(string $licence): array;
+
+    /**
+     * xml_partie.php
+     * ---------------------------------------------------------
+     * Renvoie la liste des parties de la base SPID
+     * d’un joueur.
+     *
+     * @return SPIDGame[] Ensemble des parties trouvées
+     */
+    public function getPlayerGameHistoryOnSpidBase(string $licence): array;
 
     /**
      * xml_partie.php
