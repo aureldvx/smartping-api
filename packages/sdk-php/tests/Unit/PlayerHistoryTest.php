@@ -28,3 +28,18 @@ it('should return an array of history games from ranking base for a given licenc
         ->and($result)->not()->toHaveCount(0)
         ->and($result[0])->toBeInstanceOf(RankedGame::class);
 });
+
+it('should return an array of history games from SPID base for a given licence', function() {
+    $result = $this->smartping->getPlayerGameHistoryOnSpidBase('1610533');
+    expect($result)
+        ->toBeArray()
+        ->and($result)->not()->toHaveCount(0)
+        ->and($result[0])->toBeInstanceOf(RankedGame::class);
+})->skip();
+
+it('should return an empty array of history games from SPID base for a given licence when no game has been played', function() {
+    $result = $this->smartping->getPlayerGameHistoryOnSpidBase('1610533');
+    expect($result)
+        ->toBeArray()
+        ->and($result)->toHaveCount(0);
+});
