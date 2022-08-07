@@ -12,6 +12,8 @@ services:
       dockerfile: docker/node/Dockerfile
       context: .
     container_name: smartping_api_node
+    networks:
+      - local_environment_web
     volumes:
       - ./:/app
       - ~/.gitconfig:/root/.gitconfig:ro
@@ -61,3 +63,33 @@ services:
       - ./:/app
       - ~/.gitconfig:/root/.gitconfig:ro
     working_dir: /app/packages/sdk-js
+
+  # vite to preview in browser
+  # ----------------------------------------------- #
+  vite:
+    build:
+      dockerfile: docker/node/Dockerfile
+      context: .
+    container_name: smartping_api_vite
+    depends_on:
+      - node
+    command: "yarn run browser"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.smartping_api_node.tls=true"
+      - "traefik.http.services.smartping_api_node.loadbalancer.server.port=5173"
+      - "traefik.http.routers.smartping_api_node.rule=Host(`www.smartping.traefik.me`)"
+      - "traefik.http.routers.smartping_api_node.tls.domains[0].main=www.smartping.traefik.me"
+      - "traefik.http.routers.smartping_api_node.tls.domains[0].sans=www.smartping-*.traefik.me"
+      - "traefik.docker.network=local_environment_web"
+    networks:
+      - local_environment_web
+    volumes:
+      - ./:/app
+      - ~/.gitconfig:/root/.gitconfig:ro
+    working_dir: /app/packages/sdk-js
+
+
+networks:
+  local_environment_web:
+    external: true
