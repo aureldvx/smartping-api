@@ -54,10 +54,10 @@ class ClubDetail extends SmartpingObject
     private ?string $contactPhone;
 
     #[SerializedName('latitude')]
-    private ?string $latitude;
+    private ?float $latitude;
 
     #[SerializedName('longitude')]
-    private ?string $longitude;
+    private ?float $longitude;
 
     #[SerializedName('datevalidation')]
     private ?DateTimeImmutable $validatedAt;
@@ -95,8 +95,8 @@ class ClubDetail extends SmartpingObject
         $this->contactFirstname = empty($contactFirstname) ? '' : $contactFirstname;
         $this->contactMail = empty($contactMail) ? null : $contactMail;
         $this->contactPhone = empty($contactPhone) ? null : $contactPhone;
-        $this->latitude = empty($latitude) ? null : $latitude;
-        $this->longitude = empty($longitude) ? null : $longitude;
+        $this->latitude = empty($latitude) ? null : (float) $latitude;
+        $this->longitude = empty($longitude) ? null : (float) $longitude;
         $this->validatedAt = empty($validatedAt) ? null : DateTimeHelpers::createImmutable($validatedAt, 'd/m/Y');
     }
 
@@ -186,12 +186,12 @@ class ClubDetail extends SmartpingObject
         return $this->contactPhone;
     }
 
-    public function latitude() : ?string
+    public function latitude() : ?float
     {
         return $this->latitude;
     }
 
-    public function longitude() : ?string
+    public function longitude() : ?float
     {
         return $this->longitude;
     }
