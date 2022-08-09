@@ -4,14 +4,20 @@ import { default as Sha } from 'jssha/dist/sha1'
 import md5 from 'md5'
 import { v4 as uuidV4 } from 'uuid'
 import { XMLParser } from 'fast-xml-parser';
+import Organization, {
+	OrganizationConstructorProperties,
+} from '../models/organization/organization'
+import Player from '../models/player/player'
+import RankedPlayer from '../models/player/ranked-player'
+import SpidPlayer from '../models/player/spid-player'
 
-// type OrganizationStoreItem = {
-// 	id: number;
-// 	name: string;
-// 	code: string;
-// 	type: string;
-// 	parentId: string;
-// }
+export type OrganizationStoreItem = {
+	id: number;
+	name: string;
+	code: string;
+	type: string;
+	parentId: string;
+}
 
 type DecodedXml = { [key: string]: string | number | DecodedXml | DecodedXml[] };
 
@@ -46,7 +52,7 @@ const parser = new XMLParser();
  * puisque l'API ne propose aucun endpoint pour en
  * récupérer une facilement par son identifiant.
  */
-// const organizations: OrganizationStoreItem[] = [];
+const organizations: OrganizationStoreItem[] = [];
 
 let fetchWrapper: FetchCallback = () => new Promise((resolve) => resolve(''));
 
@@ -69,6 +75,14 @@ export function setFetchCallback(callback: FetchCallback) {
 export function setCredentials(appId: string, appKey: string): void {
 	kAppId = appId;
 	kAppKey = appKey;
+}
+
+export function getOrganizationsSize(): number {
+	return organizations.length;
+}
+
+export function getOrganizations(): OrganizationStoreItem[] {
+	return organizations;
 }
 
 export async function callAPI<T, P>(
@@ -113,7 +127,7 @@ export function deserializeObject<T, P>(
 	let isSingleResult = true;
 
 	if (isList) {
-		isSingleResult = ((xml['liste'] as DecodedXml)[rootKey] as DecodedXml).length === 1;
+		isSingleResult = !Array.isArray((xml['liste'] as DecodedXml)[rootKey] as DecodedXml);
 	}
 
 	if (!isList) {
@@ -121,7 +135,7 @@ export function deserializeObject<T, P>(
 	}
 
 	if (isList && isSingleResult) {
-		const entryPath = ((xml['liste'] as DecodedXml)[rootKey] as DecodedXml[])[0] as unknown as P;
+		const entryPath = ((xml['liste'] as DecodedXml)[rootKey] as DecodedXml) as unknown as P;
 		return new normalizationModel(entryPath);
 	}
 
@@ -167,8 +181,73 @@ export async function makeRequest(
 	return fetchWrapper(kBaseUrl+endpoint, searchParameters);
 }
 
-// export function mergeRankedAndSpidPlayerCollection(): void {}
+export function mergeRankedAndSpidPlayerCollection(ranked: RankedPlayer[], spid: SpidPlayer[]): Player[] {
+	if (ranked.length === 0 && spid.length === 0) {
+		return [];
+	}
 
-// export function populateOrganizations(): void {}
+	const rankedIndexed = new Map<string, RankedPlayer>();
+	for (const r of ranked) {
+		rankedIndexed.set(r.licence(), r);
+	}
 
-// export function getOrganizationInStore(): void {}
+	const spidIndexed = new Map<string, SpidPlayer>();
+	for (const s of spid) {
+		spidIndexed.set(s.licence(), s);
+	}
+
+	const result = [];
+
+	if (rankedIndexed.size > 0) {
+		for (const [licence, player] of rankedIndexed.entries()) {
+			if (spidIndexed.has(licence)) {
+				result.push(new Player(player, spidIndexed.get(licence)))
+				spidIndexed.delete(licence);
+			} else {
+				result.push(new Player(player, undefined))
+			}
+		}
+	}
+
+	if (spidIndexed.size > 0) {
+		for (const [_, player] of spidIndexed.entries()) {
+			result.push(new Player(undefined, player))
+		}
+	}
+
+	return result;
+}
+
+export async function populateOrganizations(): Promise<void> {
+	if (organizations.length > 0) {
+		return;
+	}
+
+	await Promise.all(['F', 'Z', 'L', 'D'].map(async (type) => {
+		const response = await callAPI<Organization, OrganizationConstructorProperties>({
+			endpoint: ApiEndpoints.XML_ORGANISME,
+			requestParameters: {
+				type
+			},
+			normalizationModel: Organization,
+			rootKey: 'organisme'
+		}) as Organization|Organization[]|undefined;
+
+		const normalizedOrgs = getResponseAsArray(response).map(org => org.normalize());
+		organizations.push(...normalizedOrgs);
+	}));
+}
+
+export function getOrganizationInStore(organizationId: number): Organization|undefined {
+	const result = organizations.filter((o) => o.id === organizationId);
+	if (result.length === 0) {
+		return undefined;
+	}
+
+	return new Organization({
+		id: result[0].id,
+		code: result[0].code,
+		libelle: result[0].name,
+		idPere: result[0].parentId
+	})
+}
