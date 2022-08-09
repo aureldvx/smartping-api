@@ -120,7 +120,8 @@ class TeamContestAPI extends SmartpingCore implements TeamContestInterface
                 'equip_id2' => (string) $extraParams['equip_id2'],
             ],
             normalizationModel: TeamMatchDetails::class,
-            rootKey: 'classement'
+            // TODO
+            rootKey: 'NOT_DEFINED'
         );
 
         return $response;

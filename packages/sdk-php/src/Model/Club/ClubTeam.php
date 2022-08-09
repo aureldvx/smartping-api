@@ -152,7 +152,7 @@ class ClubTeam extends SmartpingObject
             return null;
         }
 
-        $found = array_filter($result, fn ($c) => $c->id() === $this->divisionId);
+        $found = array_filter($result, fn ($c) => $c->id() === $this->poolId);
         $found = array_values($found);
 
         if (empty($found)) {

@@ -145,7 +145,7 @@ final class ClubAPI extends SmartpingCore implements ClubInterface
     {
         /** @var ClubTeam|ClubTeam[]|null $response */
         $response = SmartpingCore::fetch(
-            endpoint: ApiEndpoint::XML_EPREUVE,
+            endpoint: ApiEndpoint::XML_EQUIPE,
             requestParams: [
                 'numclu' => $clubCode,
                 'type' => $teamType->value,
